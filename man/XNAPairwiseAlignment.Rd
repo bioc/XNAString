@@ -60,7 +60,7 @@ of XNAString object with subject
 }
 \examples{
 mat <-
- Biostrings::nucleotideSubstitutionMatrix(
+ pwalign::nucleotideSubstitutionMatrix(
    match = 1,
    mismatch = -3,
    baseOnly = TRUE

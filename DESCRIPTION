@@ -1,6 +1,6 @@
 Package: XNAString
 Title: Efficient Manipulation of Modified Oligonucleotide Sequences
-Version: 1.11.0
+Version: 1.11.1
 Authors@R: c(person(given = "Anna",
                   family = "Górska",
                   role = "aut"),
@@ -31,12 +31,13 @@ Description: The XNAString package allows for description of base sequences and
     secondary structure prediction using RNAfold from ViennaRNA. XNAString is 
     designed to be efficient representation of nucleic-acid based therapeutics, 
     therefore it stores information about target sequences and provides interface
-    for matching and alignment functions from Biostrings package. 
+    for matching and alignment functions from Biostrings and pwalign packages.
 biocViews: SequenceMatching, Alignment, Sequencing, Genetics
 Depends: R (>= 4.1)
 Imports:
     utils,
     Biostrings,
+    pwalign,
     BSgenome,
     data.table,
     GenomicRanges,

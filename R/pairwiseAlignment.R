@@ -1,6 +1,6 @@
 
 ### =========================================================================
-### The XNAPairwiseAlignment() generic & related functions based on Biostrings
+### The XNAPairwiseAlignment() generic & related functions based on pwalign
 ### -------------------------------------------------------------------------
 
 #' Pairwise alignment methods for XNAString object
@@ -33,7 +33,7 @@
 #' methods
 #'
 #' @return an instance of class \code{\link{PairwiseAlignments}}
-#' @importMethodsFrom Biostrings pairwiseAlignment
+#' @importMethodsFrom pwalign pairwiseAlignment
 #' @include xnaStringClass.R
 #'
 #' @rdname XNAPairwiseAlignment
@@ -41,7 +41,7 @@
 #' 
 #' @examples 
 #' mat <-
-#'  Biostrings::nucleotideSubstitutionMatrix(
+#'  pwalign::nucleotideSubstitutionMatrix(
 #'    match = 1,
 #'    mismatch = -3,
 #'    baseOnly = TRUE
@@ -97,7 +97,7 @@ setMethod("XNAPairwiseAlignment", c("XNAString", "character"),
             
             mpi.XStringSet.pairwiseAlignment <-
               utils::getFromNamespace("mpi.XStringSet.pairwiseAlignment",
-                                      "Biostrings")
+                                      "pwalign")
             
             mpi.XStringSet.pairwiseAlignment(
               pattern,

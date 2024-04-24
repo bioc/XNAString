@@ -117,11 +117,11 @@ siRNA_HELM <- function(xnastring_obj) {
     changeBase(compl_dictionary(xnastring_obj), base[2])
   
   mat <-
-    Biostrings::nucleotideSubstitutionMatrix(match = 1,
-                                             mismatch = 0,
-                                             baseOnly = TRUE)
+    pwalign::nucleotideSubstitutionMatrix(match = 1,
+                                          mismatch = 0,
+                                          baseOnly = TRUE)
   
-  pa <- Biostrings::pairwiseAlignment(
+  pa <- pwalign::pairwiseAlignment(
     base_sense,
     Biostrings::reverseComplement(Biostrings::DNAStringSet(base_antisense)),
     gapOpening = 1000,
@@ -131,8 +131,8 @@ siRNA_HELM <- function(xnastring_obj) {
   )
   R1S <- Biostrings::start(Biostrings::pattern(pa))
   R1E <- Biostrings::end(Biostrings::pattern(pa))
-  R2S <- Biostrings::start(Biostrings::subject(pa))
-  R2E <- Biostrings::end(Biostrings::subject(pa))
+  R2S <- Biostrings::start(IRanges::subject(pa))
+  R2E <- Biostrings::end(IRanges::subject(pa))
   
   n1 <- nchar(base_sense)
   n2 <- nchar(base_antisense)
