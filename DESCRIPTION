@@ -1,6 +1,6 @@
 Package: XNAString
 Title: Efficient Manipulation of Modified Oligonucleotide Sequences
-Version: 1.16.0
+Version: 1.17.0
 Authors@R: c(person(given = "Anna",
                   family = "Górska",
                   role = "aut"),
