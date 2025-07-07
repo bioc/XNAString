@@ -1,6 +1,6 @@
 Package: XNAString
 Title: Efficient Manipulation of Modified Oligonucleotide Sequences
-Version: 1.17.0
+Version: 1.17.1
 Authors@R: c(person(given = "Anna",
                   family = "Górska",
                   role = "aut"),
@@ -85,4 +85,6 @@ Collate:
     'predictDuplexStructure.R'
     'predictMfeStructure.R'
     'reverseComplement.R'
+    'zzz.R'
 VignetteBuilder: knitr
+PackageStatus: Deprecated
